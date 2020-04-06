@@ -20,6 +20,18 @@ namespace Summaries.Controllers
             _service.AddBook(book);
             return Ok("Added");
         }
+
+        //Get allBooks
+
+        [HttpPost("[action]")]
+
+        public IActionResult GetBooks()
+        {
+            var allBooks = _service.GetAllBooks();
+            
+            return Ok(allBooks);
+        }
+
         
     }
 }
