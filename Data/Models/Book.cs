@@ -1,6 +1,6 @@
 using System;
 
-namespace ASP.NET.Controllers
+namespace Summaries.Data
 {
     public class Book
     {
@@ -16,6 +16,6 @@ namespace ASP.NET.Controllers
 
        public DateTime? DateStart { get; set; }
 
-       public DateTime? DateEnd { get; set; }
+       public DateTime? DateRead { get; set; }
     }
 }

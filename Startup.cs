@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Summaries.Data;
 
 namespace ASP.NET
 {
@@ -26,6 +27,10 @@ namespace ASP.NET
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            //Creating a new reference to the book service
+
+            services.AddTransient<IBookService, BookService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
