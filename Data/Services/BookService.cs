@@ -18,7 +18,7 @@ namespace Summaries.Data
         public List<Book> GetAllBooks()
         {
             return Data.Books.ToList();
-            
+        
         }
 
         public Book GetBookById(int id)

@@ -23,7 +23,7 @@ namespace Summaries.Controllers
 
         //Get allBooks
 
-        [HttpPost("[action]")]
+        [HttpGet("[action]")]
 
         public IActionResult GetBooks()
         {
