@@ -32,6 +32,8 @@ namespace Summaries.Controllers
             return Ok(allBooks);
         }
 
+        //Update a book
+
         [HttpPut("UpdateBook/{id}")]
 
         public IActionResult UpdateBooks(int id, [FromBody]Book book)
@@ -40,7 +42,27 @@ namespace Summaries.Controllers
             
             return Ok(book);
         }
+        //Delete a book
 
-        
+        [HttpPut("DeleteBook/{id}")]
+
+        public IActionResult DeleteBook(int id)
+        {
+            _service.DeleteBook(id);
+            
+            return Ok();
+        }
+
+        //Get a single book by id
+
+        [HttpPut("SIngleBook/{id}")]
+
+        public IActionResult GetBookById(int id)
+        {
+            var book = _service.GetBookById(id);
+            
+            return Ok(book);
+        }
+
     }
 }
