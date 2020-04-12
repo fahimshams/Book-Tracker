@@ -55,7 +55,7 @@ namespace Summaries.Controllers
 
         //Get a single book by id
 
-        [HttpPut("SIngleBook/{id}")]
+        [HttpGet("SingleBook/{id}")]
 
         public IActionResult GetBookById(int id)
         {
