@@ -5,10 +5,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { HomeComponent } from './components/home/home.component';
 import { BookComponent } from './components/book/book.component';
 import { NewBookComponent } from './components/new-book/new-book.component';
 import { ShowBookComponent } from './components/show-book/show-book.component';
@@ -21,8 +19,6 @@ import { BookService } from './services/book.service';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     BookComponent,
     NewBookComponent,
     ShowBookComponent,
@@ -35,8 +31,11 @@ import { BookService } from './services/book.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'books', component: BookComponent},
+      { path: 'new-book', component: NewBookComponent},
+      { path: 'update-book/:id', component: UpdateBookComponent},
+      { path: 'delete-book/:id', component: DeleteBookComponent},
+      { path: 'show-book/:id', component: ShowBookComponent},
     ])
   ],
   providers: [BookService],
