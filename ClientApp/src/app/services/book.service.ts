@@ -28,6 +28,6 @@ export class BookService {
     //method to get a single book
     getBookById(id: number){
 
-        return this.http.get<Book>(this._baseURL+"/SingleBook"+id);
+        return this.http.get<Book>(this._baseURL+"/SingleBook/"+id);
     }
 }
