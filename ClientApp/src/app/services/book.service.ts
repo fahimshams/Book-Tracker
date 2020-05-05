@@ -30,4 +30,10 @@ export class BookService {
 
         return this.http.get<Book>(this._baseURL+"/SingleBook/"+id);
     }
+
+    //method to update book
+    updateBook(book: Book){
+
+        return this.http.put(this._baseURL+"/UpdateBook/" + book.id, book);
+    }
 }

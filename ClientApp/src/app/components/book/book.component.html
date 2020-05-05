@@ -25,7 +25,7 @@
         <td>{{book.description | slice: 0:50}}...</td>
         <td>{{book.rate}}</td>
         <td>{{book.dateStart | date: "dd/MM/yyyy"}}</td>
-        <td>{{book.dateRead | date: "dd/MM/yyyy"}}}</td>
+        <td>{{book.dateRead | date: "dd/MM/yyyy"}}</td>
         <td>{{book.dateRead ? "Read" : book.dateStart ? "In progress" : "Not started"}}</td>
         <td>
             <button class="btn btn-default btn-sm" type="button" (click)="showBook(book.id)">
