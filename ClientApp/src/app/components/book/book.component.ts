@@ -28,4 +28,16 @@ export class BookComponent implements OnInit {
 
   }
 
+  updateBook(id: number){
+
+    this.router.navigate(["/update-book/"+id]);
+
+  }
+
+  deleteBook(id: number){
+
+    this.router.navigate(["/delete-book/"+id]);
+
+  }
+
 }
