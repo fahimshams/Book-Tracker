@@ -40,6 +40,6 @@ export class BookService {
     //method to delete book
     deleteBook(id: number){
 
-        return this.http.delete(this._baseURL+"/DeletBook/"+id);
+        return this.http.delete(this._baseURL+"/DeleteBook/"+id);
     }
 }
