@@ -4,5 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
+
+// home view page
 export class HomeComponent {
 }
